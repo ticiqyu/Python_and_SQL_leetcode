@@ -6,7 +6,7 @@ class Solution:
         while x > 0:
             l.append(x%10)
             x = x//10
-        return l[0::]==l[::-1]
+        return l==l[::-1]
 
 
             
