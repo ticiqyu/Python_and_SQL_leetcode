@@ -1,8 +1,6 @@
 class Solution:
     def canBeEqual(self, s1: str, s2: str) -> bool:
-        for i in range(4):
-            if s1[i] != s2[(i+2)%4] and s1[i] != s2[i]:
-                return False
-            if s2[i] != s1[(i+2)%4] and s2[i] != s1[i]:
-                return False
-        return True
+        return ((s1[0] == s2[0] and s1[2] == s2[2]) or
+                (s1[0] == s2[2] and s1[2] == s2[0])) and \
+               ((s1[1] == s2[1] and s1[3] == s2[3]) or
+                (s1[1] == s2[3] and s1[3] == s2[1]))
