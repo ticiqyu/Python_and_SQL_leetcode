@@ -1,5 +1,7 @@
 class Solution:
     def decodeCiphertext(self, encodedText: str, rows: int) -> str:
+        if rows == 1:
+            return encodedText
         n = len(encodedText)//rows
         s = ''
         for i in range(n):
